@@ -1,0 +1,88 @@
+// ATIVIDADE 01 //
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+
+int main(){
+    
+    setlocale(LC_ALL, "portuguese");
+    /* atividade 03*/
+    int idade;
+
+    printf("Digite sua idade:");
+    scanf("\n %d", &idade);
+
+    if(idade >= 18){
+        printf("maior de idade");
+    }else {
+        printf("menor de idade");
+    }
+
+    return 0;
+}
+// ATIVIDADE 02 //
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+
+int main(){
+    
+    setlocale(LC_ALL, "portuguese");
+    /* atividade 03*/
+    float salario;
+
+    printf("Digite seu salario:");
+    scanf("\n %f", &salario);
+
+    if(salario >= 1320){
+        printf("rico");
+    }else {
+        printf("pobre");
+    }
+
+    return 0;
+}
+// ATIVIDADE 03 //
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+
+int main(){
+    
+    setlocale(LC_ALL, "portuguese");
+    /* atividade 03*/
+    float altura;
+
+    printf("Digite sua altura:");
+    scanf("\n %f", &altura);
+
+    if(altura >= 180){
+        printf("altão em meu cria");
+    }else {
+        printf("baixinho, toma fermento que cresce");
+    }
+
+    return 0;
+}
+// ATIVIDADE 04 //
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+
+int main(){
+    
+    setlocale(LC_ALL, "portuguese");
+    /* atividade 03*/
+    float peso;
+
+    printf("Digite seu peso:");
+    scanf("\n %f", &peso);
+
+    if(peso >= 60){
+        printf("pesa mais doq 60kg");
+    }else {
+        printf("pesa menos doq 60kg");
+    }
+
+    return 0;
+}
