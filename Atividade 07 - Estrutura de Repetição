@@ -1,0 +1,47 @@
+//Atividade 01//
+#include <stdio.h>
+#include <math.h>
+
+main(){
+	int numb, res = 0;
+	
+	printf("Digite um numero aleatório");
+	scanf("%d", &numb);
+	
+	while(res <= numb){
+		printf("%d \n", res);
+		res++;
+	}	
+}
+//Atividade 02//
+#include <stdio.h>
+#include <math.h>
+
+main(){
+	int numb, res = 0;
+	
+	printf("Digite um numero aleatório");
+	scanf("%d", &numb);
+	
+	while(numb >= res){
+		printf("%d \n", numb);
+		numb--;
+	}
+}
+//Atividade 03//
+#include <stdio.h>
+#include <math.h>
+
+main(){
+	int numb, impar, res = 0;
+	
+	printf("Digite um numero aleatório");
+	scanf("%d", &numb);
+	
+	while(impar <= numb){
+		printf("%d \n", impar);
+		impar = (res * 2) + 1;
+		res++;
+	}
+}
+//Atividade 04//
