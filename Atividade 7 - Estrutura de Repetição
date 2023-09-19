@@ -45,6 +45,38 @@ main(){
 	}
 }
 //Atividade 04//
+#include<stdio.h>
+#include<math.h>
+
+main(){
+	
+	int numero=1, conta;
+	
+	while(numero <= 5){
+		conta = numero * 5;
+		printf("%d \n", conta);
+		numero++;
+	}
+}
+//Atividade 05//
+#include <stdio.h>
+
+int main() {
+    int numero = 2;
+    int soma = 0;
+    int contador = 0;
+
+    while (contador < 50) {
+        soma += numero;
+        numero += 2;
+        contador++;
+    }
+
+    printf("A soma dos 50 primeiros números pares é: %d\n", soma);
+
+    return 0;
+}
+//Atividade 06//
 
 
 //Atividade 07//
