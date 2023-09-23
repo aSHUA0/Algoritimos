@@ -77,3 +77,96 @@ main(){
 	printf("\nPorcentagem de avaliações pessimas:%d%\n A maior idade foi:%d", porcentagemE, maiorIdadeE);
 	printf("\nA maior idade que respondeu Otimo foi de:%d\n A maior idade que respondeu ruim foi de:%d\n E a diferença deles é de:%d", maiorIdadeA, maiorIdadeD, diferenca);
 }
+//Atividade 02//
+#include<stdio.h>
+#include<math.h>
+#include <locale.h>
+
+int main(){
+	setlocale(LC_ALL, "portuguese");
+  char elevador, periodo, periodoMaisUsado, elevadorMaisUsado;
+	int teste, contadorA, contadorB, contadorC, maiorElevador, morador;
+  int periodoM, periodoV, periodoN, maiorPeriodo, menorPeriodo;
+  int totalServicos;
+  float direncaPercentual, diferencaServicos;
+
+	do{
+		do{
+			fflush(stdin);
+			printf("Qual elevador você mais utiliza?(Digite a letra do elevador)\nElevador A\nElevador B\nElevador C\n");
+			scanf("%c", &elevador);
+			if(elevador != 'A' && elevador != 'B' && elevador != 'C'){
+				printf("Por favor digite a vogal do elevador\n");
+			}
+		}while(elevador != 'A' && elevador != 'B' && elevador != 'C');
+		//contador dos elevadores//
+    if(elevador == 'A'){
+      contadorA++;
+    }else if (elevador == 'B'){
+      contadorB++;
+    }else if (elevador == 'C'){
+      contadorC++;
+    }
+    do{
+			fflush(stdin);
+			printf("Qual é o periodo que você mais utiliza?\nMatutino - M\nVespertino - V\nNoturno - N\n");
+			scanf("%c", &periodo);
+			if(periodo != 'M' && periodo != 'V' && periodo != 'N'){
+				printf("Por favor digite a vogal designada\n");
+			}
+		}while(periodo != 'M' && periodo != 'V' && periodo != 'N');
+    //contador de periodo//
+    if(periodo == 'M'){
+      periodoM++;
+    }else if (periodo == 'V'){
+      periodoV++;
+    }else if (periodo == 'N'){
+      periodoN++;
+    }
+    //periodo mais usado//
+    if ((periodoM > periodoV) && (periodoM > periodoN)){
+      maiorPeriodo = periodoM;
+      periodoMaisUsado = 'M';
+    }else  if ((periodoV > periodoM) && (periodoV > periodoN)){
+      maiorPeriodo = periodoV;
+      periodoMaisUsado = 'V';
+    } if ((periodoN > periodoV) && (periodoN > periodoV)){
+      maiorPeriodo = periodoN;
+      periodoMaisUsado = 'N';
+    }
+    //periodo menos usado//
+      if ((periodoM < periodoV) && (periodoM < periodoN)){
+      menorPeriodo = periodoM;
+      periodoMaisUsado = 'M';
+    }else  if ((periodoV < periodoM) && (periodoV < periodoN)){
+      menorPeriodo = periodoV;
+      periodoMaisUsado = 'V';
+    } if ((periodoN < periodoV) && (periodoN < periodoV)){
+      menorPeriodo = periodoN;
+      }
+    //elevador mais usado//
+    if ((contadorA > contadorB) && (contadorA > contadorC)){
+      maiorElevador = contadorA;
+      elevadorMaisUsado = 'A';
+    }else  if ((contadorB > contadorA) && (contadorB > contadorC)){
+      maiorElevador = contadorB;
+      elevadorMaisUsado = 'B';
+    } if ((contadorC > contadorB) && (contadorC > contadorA)){
+      maiorElevador = contadorC;
+      elevadorMaisUsado = 'C';
+    }
+
+    morador++;
+    printf("Quer iniciar um novo formulario?\nSim - 1\nNão - 2\n");
+    scanf("%d", &teste);
+
+	}while(teste != 1);
+  direncaPercentual = ((maiorPeriodo - menorPeriodo) / morador) * 100;
+  totalServicos = (contadorA + contadorB + contadorC) / 3;
+  diferencaServicos = (totalServicos / morador) * 100;
+  printf("Periodo mais usado dos elevadores é %c", periodoMaisUsado);
+  printf("O elevador mais usado é %c", elevadorMaisUsado);
+  printf("A diferença do mais usado e do menos usado é %.2f", direncaPercentual);
+  printf("O total de seviço é %.2f", difediferencaServicos);
+}
+//At
