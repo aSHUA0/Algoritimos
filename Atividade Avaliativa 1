@@ -19,3 +19,135 @@ int main(){
   printf("A função do %d é %.2f", n, raiz);
 }
 //Atividade 02//
+#include<stdio.h>
+#include<math.h>
+#include <locale.h>
+
+int main(){
+	setlocale(LC_ALL, "portuguese");
+  int contador = 0;
+  float ze = 1.10, chico = 1.50;
+
+  while(ze <= chico){
+      chico +=0.02;
+      ze += 0.03;
+      contador ++;
+  }
+  printf("%d anos", contador);
+  
+}
+//Atividade 03//
+#include<stdio.h>
+#include<math.h>
+#include <locale.h>
+
+int main(){
+	setlocale(LC_ALL, "portuguese");
+  int valorA, valorB, valorC;
+
+  printf("Digite três valores distintos positivo\n");
+  scanf("%d", &valorA);
+  scanf("%d", &valorB);
+  scanf("%d", &valorC);
+
+  if((valorA < 1) && (valorB < 1) && (valorC < 1)){
+    printf("Esses valores não são de um triangulo");
+  }
+  //calssificação dos triangulos//
+  if((valorA != valorB) && (valorA != valorC) && (valorC != valorB)){
+    printf("O triangulo é escaleno");
+  }else if((valorA == valorB) && (valorA == valorC) && (valorC == valorB)){
+    printf("O triangulo é equilátero");
+  }else{
+    printf("O triangulo é isosceles");
+  }
+}
+//Atividade 04//
+#include<stdio.h>
+#include<math.h>
+#include <locale.h>
+
+int main(){
+	setlocale(LC_ALL, "portuguese");
+  int valorA, valorB, valorC;
+
+  printf("Digite três valores distintos positivo\n");
+  scanf("%d", &valorA);
+  scanf("%d", &valorB);
+  scanf("%d", &valorC);
+
+  if((valorA < 1) && (valorB < 1) && (valorC < 1)){
+    printf("Esses valores não são de um triangulo");
+  }
+  //calssificação dos triangulos//
+  if((valorA != valorB) && (valorA != valorC) && (valorC != valorB)){
+    printf("Triângulo Retângulo");
+  }else if((valorA == valorB) && (valorA == valorC) && (valorC == valorB)){
+    printf("Triângulo Acutângulo");
+  }else{
+    printf("Triângulo Obtusângulo");
+  }
+}
+//Atividade 05//
+#include<stdio.h>
+#include<math.h>
+#include <locale.h>
+
+int main(){
+	setlocale(LC_ALL, "portuguese");
+  float x1, x2, y1, y2;
+  float subX, subY, soma, raiz;
+
+  printf("Digite o valor de X1 e Y1");
+  scanf("%f", &x1);
+  scanf("%f", &y1);
+
+  printf("Digite o valor de X2 e Y2");
+  scanf("%f", &x2);
+  scanf("%f", &y2);
+
+  subX = x1-x2;
+  subY = y1-y2;
+  subX = pow(subX, 2);
+  subY = pow(subY, 2);
+  soma = subX + subY;
+  raiz = sqrt(soma);
+
+  printf("A distancia é %.4f", raiz);
+}
+//Atividade 06//
+#include<stdio.h>
+#include<math.h>
+#include <locale.h>
+
+int main(){
+	setlocale(LC_ALL, "portuguese");
+  float x, y;
+
+  printf("Digite o valor de X e de Y\n");
+  scanf("%f", &x);
+  scanf("%f", &y);
+  
+  //ponto em nenhum quadrante//
+  
+  if(x == y && y == 0){
+    printf("Origem");
+  }else if(x == 0){
+    printf("Eixo X");
+  }else if(y == 0){
+    printf("Eixo Y");
+  }
+  
+  //ponto dentro do quadrante//
+
+  if(x > 0 && y > 0){
+    printf("Primeiro Quadrante");
+  }else if(x < 0 && y > 0){
+    printf("Segundo Quadrante");
+  }else if(x < 0 && y < 0){
+    printf("Terceiro Quadrante");
+  }else if(x > 0 && y < 0){
+    printf("Quarto Quadrante");
+  }
+}
+//Atividade 07//
