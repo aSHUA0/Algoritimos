@@ -1,0 +1,31 @@
+//Atividade 01//
+#include<stdio.h>
+#include<math.h>
+
+int main(){
+  int A[7] = {1, 0, 5, -2, -5, 7};
+  
+  A[6] = A[0] + A[1] + A[5];
+  A[4] = 100;
+
+  for(int i = 0; i < 6; i++){
+    printf("\n%d", A[i]);
+  }
+  printf("\nA soma dá %d", A[6]);
+}
+//Atividade 02//
+#include<stdio.h>
+#include<math.h>
+
+int main(){
+  int A[7];
+
+  printf("Digite 6 números inteiros:\n");
+  for(int i=0; i < 6; i++){
+    scanf("%d", &A[i]);
+  }
+  for(int i=0; i < 6; i++){
+    printf("Os valores digitados foram:%d\n", A[i]);
+  }
+}
+//Atividade 03//
